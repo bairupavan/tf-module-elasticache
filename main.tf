@@ -32,7 +32,7 @@ resource "aws_elasticache_subnet_group" "subnet-group" {
 
 resource "aws_elasticache_parameter_group" "param-group" {
   name   = "${var.name}-${var.env}-param-group"
-  family = "redis2x"
+  family = "redis6.x"
   tags   = merge(var.tags, { Name = "${var.name}-${var.env}-param-group" })
 }
 
